@@ -153,7 +153,7 @@ function vitePluginManusDebugCollector(): Plugin {
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
 
 export default defineConfig({
-  base: '/tenant-rights-portal/',
+  base: '/example-tennant-page/',
   plugins,
   resolve: {
     alias: {
