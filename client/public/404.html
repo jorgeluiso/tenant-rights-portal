@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tenant Rights Portal</title>
+    <script type="text/javascript">
+      // Single Page App redirect for GitHub Pages
+      // When GitHub Pages encounters a 404, it serves this page.
+      // This script redirects the browser to the index.html with the
+      // original path stored in a query parameter, so the SPA router
+      // can handle it client-side.
+      var pathSegmentsToKeep = 1; // Keep /tenant-rights-portal/ prefix
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
